@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+اخبار متا تانک
+</title>
+
+<style>
+
+body{
+background:
+linear-gradient(
+180deg,
+#000015,
+#050033,
+#12004d,
+#000011);
+
+font-family:tahoma;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+h1{
+font-size:42px;
+color:#7be8ff;
+
+text-shadow:
+0 0 10px #00ccff,
+0 0 20px #00ccff,
+0 0 30px #00ccff;
+}
+
+.box{
+background:
+rgba(0,0,40,0.8);
+
+border:
+2px solid #00ccff;
+
+border-radius:20px;
+
+padding:20px;
+
+margin:20px;
+
+box-shadow:
+0 0 20px #00ccff;
+}
+
+.mode{
+font-size:28px;
+color:#00ff88;
+}
+
+button{
+
+width:90%;
+
+padding:18px;
+
+margin:10px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:20px;
+
+color:white;
+
+background:
+linear-gradient(
+90deg,
+#0066ff,
+#00ccff,
+#00ff88);
+
+box-shadow:
+0 0 15px #00ccff;
+}
+
+input{
+width:90%;
+padding:12px;
+font-size:18px;
+text-align:center;
+border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>
+🚀 اخبار متا تانک 🚀
+</h1>
+
+<div class="box">
+
+<h2>
+📰 آخرین خبر
+</h2>
+
+<p>
+
+📦 نسخه 1.4.4
+
+<br><br>
+
+✅ رفع برخی مشکلات گردان
+
+<br>
+
+🎁 اضافه شدن
+پیشنهادهای شگفت انگیز جدید
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h2>
+🎮 گیم مود فعلی
+</h2>
+
+<p
+class="mode"
+id="mode">
+
+...
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h2>
+🏆 پایان لیگ
+</h2>
+
+<p
+class="mode"
+id="league">
+
+...
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h2>
+📺 کانال
+</h2>
+
+<input
+value="https://rubika.ir/mtatank"
+readonly>
+
+</div>
+
+<div class="box">
+
+<h2>
+📞 ارتباط با ما
+</h2>
+
+<input
+value="https://rubika.ir/ELXELX240"
+readonly>
+
+</div>
+
+<div class="box">
+
+<h2>
+🎯 درباره بازی
+</h2>
+
+<p>
+
+متا تانک یک بازی
+آنلاین نبرد تانک هاست.
+
+<br><br>
+
+⚔️ نبرد تیمی
+
+<br>
+
+🚀 گیم مودهای متنوع
+
+<br>
+
+🏆 رویدادهای ویژه
+
+<br>
+
+👥 گردان ها
+
+<br>
+
+💥 میدان های جنگ
+تخریب پذیر
+
+<br><br>
+
+هدف شما تبدیل شدن
+به بهترین فرمانده
+میدان نبرد است.
+
+</p>
+
+</div>
+
+<script>
+
+function gameMode(){
+
+let now=
+new Date();
+
+let t=
+now.getHours()*60+
+now.getMinutes();
+
+if(t>=1170&&t<1290)
+return "🔥 2 به 2";
+
+if(t>=1290&&t<1410)
+return "🔥 3 نفره";
+
+if(t>=1410||t<90)
+return "🔥 3 به 3";
+
+if(t>=90&&t<210)
+return "🔥 5 نفره";
+
+if(t>=210&&t<330)
+return "🔥 2 به 2";
+
+if(t>=330&&t<450)
+return "🔥 3 نفره";
+
+if(t>=450&&t<570)
+return "🔥 3 به 3";
+
+if(t>=570&&t<690)
+return "🔥 5 نفره";
+
+if(t>=690&&t<810)
+return "🔥 2 به 2";
+
+if(t>=810&&t<930)
+return "🔥 3 نفره";
+
+if(t>=930&&t<1050)
+return "🔥 3 به 3";
+
+if(t>=1050&&t<1170)
+return "🔥 5 نفره";
+
+return "⏳";
+}
+
+document
+.getElementById(
+"mode")
+.innerHTML=
+gameMode();
+
+function league(){
+
+let now=
+new Date();
+
+let target=
+new Date();
+
+target.setDate(
+now.getDate()+
+((8-now.getDay())%7)
+);
+
+target.setHours(
+0,0,0,0);
+
+let diff=
+target-now;
+
+let d=
+Math.floor(
+diff/
+86400000);
+
+let h=
+Math.floor(
+(diff%
+86400000)
+/3600000);
+
+let m=
+Math.floor(
+(diff%
+3600000)
+/60000);
+
+document
+.getElementById(
+"league")
+.innerHTML=
+"⏳ "+
+d+
+" روز "+
+h+
+" ساعت "+
+m+
+" دقیقه";
+}
+
+league();
+
+setInterval(
+league,
+60000);
+
+</script>
+
+</body>
+  </html>
